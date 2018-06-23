@@ -2,7 +2,6 @@
 FROM php:5.6-fpm-alpine
 ENV WORKDIR=/app/backend
 RUN mkdir -p /app/backend /scripts
-CMD [ "sh", "-c", "/scripts/entrypoint.sh" ]
 WORKDIR /app/backend
 RUN apk add --update --no-cache \
 		libmcrypt-dev \
@@ -27,3 +26,4 @@ COPY scripts/ /scripts
 COPY php.ini /usr/local/etc/php/
 COPY --chown=www-data:www-data presta .
 VOLUME /app/backend
+CMD [ "sh", "-c", "/scripts/entrypoint.sh" ]
