@@ -13,7 +13,7 @@ if [ "${LOCAL_ENV}" = "true" ]; then
   sed -i "s/$stage_url/localhost/g" /scripts/dump.sql
 else
   echo "Using local env, seding db dump with 'localhost' instead of '$stage_url'"
-  sed -i "s/$stage_url/mazzaq.pl/drukujesz/g" /scripts/dump.sql
+  sed -i "s-$stage_url-195.242.117.177:7000/drukujesz-g" /scripts/dump.sql
 fi
 mysql -u $MYSQL_USERNAME -p$MYSQL_ROOT_PASSWORD -h $MYSQL_HOSTNAME $MYSQL_DATABASE < /scripts/dump.sql
 echo "New dump was applied"

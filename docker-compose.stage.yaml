@@ -14,7 +14,7 @@ services:
     depends_on:
       - mysql
     env_file:
-      - local.env
+      - stage.env
     volumes:
       - ./backend/presta:/app/backend
     restart: always
@@ -24,7 +24,7 @@ services:
     volumes:
       - presta_db_data:/var/lib/mysql
     env_file:
-      - local.env
+      - stage.env
     expose:
       - "3306"
     # for debug db replace expose with those lines
