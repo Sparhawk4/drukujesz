@@ -15,8 +15,6 @@ services:
       - mysql
     env_file:
       - stage.env
-    volumes:
-      - ./backend/presta:/app/backend
     restart: always
 
   mysql:
