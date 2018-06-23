@@ -1,0 +1,9 @@
+# Don't check auto-generated stuff into git
+presta/app/cache
+presta/app/logs
+
+# Cruft
+.DS_Store
+npm-debug.log
+.idea
+.vscode
