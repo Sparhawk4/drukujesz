@@ -1,0 +1,11 @@
+tr.first_in_section td {
+  border-top:1pt solid black;
+  font-weight: bold;
+}
+tr.not_oprimal_price td{
+	color:red;
+}
+
+tr.inview {
+  height: 10px;  
+}
