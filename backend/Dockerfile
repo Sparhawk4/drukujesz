@@ -26,4 +26,4 @@ COPY scripts/ /scripts
 COPY php.ini /usr/local/etc/php/
 COPY --chown=www-data:www-data presta .
 VOLUME /app/backend
-CMD [ "sh", "-c", "/scripts/entrypoint.sh" ]
+# CMD [ "sh", "-c", "/scripts/entrypoint.sh" ]
